@@ -1,0 +1,1626 @@
+/*
+Theme Name: ORPEtheme3
+Theme URI: http://orangepepe/orpetheme
+Description: Created by @StvfreBTC.
+Author: @StvfreBTC Telegram.
+Version: 3.0
+Text Domain: orpetheme3
+*/
+
+@media (prefers-reduced-motion: no-preference) {
+    * {
+    scroll-behavior: smooth;
+    }
+    }
+
+:root {
+    --primary-color: #ff7d2c;
+    --secondary-color: #fff;
+    --orange-pepe: #ff5e00;
+    --yellow-pepe: #f4b400;
+    --yellow-hover: #ffc700;
+    --purple-pepe: #da1aa4;
+    --black-pepe: #130a48;
+    --red-pepe: #da1257;
+    --second-orange-pepe: #ed4315;
+    --lightblue-pepe: #1fe5d8;
+    --text-color: #fff;
+    --box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    --transition-speed: 0.8s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    background: linear-gradient(10deg, #d54111 60%, #f4b400 100%);
+    color: white;
+    font-family: futura, Nunito, sans-serif;
+    font-weight: 100;
+    font-size: 1.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    /* max-width: 1200px; Limita el ancho en pantallas grandes */
+    margin: 0 auto; /* Centra el contenido */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 15vh; /* Altura proporcional */
+    padding: 0 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px; /* Separación entre enlaces */
+    align-items: center;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+    width: 100%;
+}
+
+.nav-links a:hover {
+    color: #f4b400; /* Resalta el texto al pasar el cursor */
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Coloca el subrayado justo debajo del texto */
+    width: 0;
+    height: 3px;
+    background: #f4b400;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%; /* Subraya completamente el enlace */
+}
+
+/* MAIN SECTION */
+
+#main-section {
+    margin: 0;
+    height: auto;
+}
+
+.main-content {
+    height: calc(85vh);
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    gap: 20px;
+}
+
+.main-content > #orpe-text > .socials {
+    margin-top: 10px;
+    flex-direction: row;
+    font-size: 0.9rem;
+    font-weight: 100;
+}
+
+.main-content > #orpe-text > .socials > a img {
+    margin-right: 10px;
+    width: 30px;
+    height: auto;
+    object-fit: contain;
+}
+
+img {
+    transition: transform 0.3s ease, filter 0.3s ease; /* Animación suave */
+}
+
+#orpe-main-logo {
+    max-width: 100%;
+    height: auto;
+    width: 400px;
+}
+
+img:hover {
+    transform: scale(1.05); /* Agranda un poco la imagen */
+    filter: brightness(1.2); /* Aumenta el brillo para un efecto más llamativo */
+}
+
+#orpe-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#dolar-span {
+    font-family: athelas, serif;
+}
+
+h1, h2, h3, h6 {
+    transition: transform 0.3s ease, color 0.3s ease; /* Animación suave */
+}
+
+h1:hover, h2:hover, h3:hover, h6:hover, a:hover{
+    transform: scale(1.1); /* Agranda un poco el texto */
+    color: #f4b400; /* Cambia el color al hover */
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+h2 {
+    margin-top: -15px;
+    font-size: 2.4rem;
+}
+
+p {
+    font-size: 1.3rem;
+}
+
+.btn {
+    font-size: 2rem;
+    color: white;
+    background: linear-gradient(135deg, #ff5e00, #ffc700);
+    font-family: inherit;
+    font-weight: 700;
+    border: none;
+    border-radius: 50px;
+    padding: 15px 30px;
+    box-shadow: 0 10px 20px rgba(255, 94, 0, 0.5);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.btn:hover {
+    transform: translateY(-8px); /* Efecto flotante más notable */
+    box-shadow: 0 20px 40px rgba(255, 94, 0, 0.9); /* Intensifica la sombra al hacer hover */
+    background: linear-gradient(135deg, #ffc700, #ff5e00); /* Inversión de colores */
+}
+
+.btn:active {
+    transform: translateY(0); /* Regresa al presionar */
+    box-shadow: 0 8px 15px rgba(255, 94, 0, 0.5); /* Reduce la sombra al hacer clic */
+}
+
+#main-section .copy-btn-div {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+    padding: 0 0 0 15px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+#main-section .copy-btn-div:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+#main-section .copy-btn-div p {
+    font-size: 0.9rem;
+}
+
+#main-section .copy-btn {
+    background: linear-gradient(135deg, #ff5e00, #ffc700);
+    border: none;
+    box-shadow: 0 10px 20px rgba(255, 94, 0, 0.5);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 15px;
+    border-radius: 25px;
+    transition: all 0.5s ease;
+}
+
+#main-section .copy-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(255, 94, 0, 0.5);
+    background: linear-gradient(135deg, #ffc700, #ff5e00);
+}
+
+#main-section .copy-btn img {
+    height: auto;
+    width: 20px;
+}
+
+@media (max-width: 768px) {
+    .copy-btn-div {
+        margin: 0 !important;
+        padding: 10px !important;
+        height: 50px;
+        flex-direction: row; /* Distribuye en columna */
+        align-items: flex-start; /* Alinea los elementos a la izquierda */
+        gap: 8px;
+        max-width: 80vw;
+    }
+
+    .copy-btn-div p {
+        font-size: 10px; /* Reduce el tamaño del texto */
+        word-wrap: break-word;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        max-width: 100%;
+    }
+
+    .copy-btn-div .copy-btn {
+        background: none !important;
+        box-shadow: none !important;
+    }
+
+    .copy-btn img {
+        width: 16px; /* Icono más pequeño */
+        height: 16px;
+    }
+
+    .copy-btn span {
+        font-size: 12px; /* Ajusta el texto del botón */
+    }
+}
+
+/* NATIONAL ANTHEM */
+
+.orpe-anthem-audio {
+    text-align: center;
+    margin: 20px;
+}
+
+.orpe-anthem-audio h6 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#play-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+#play-button svg {
+    width: 40px;
+    height: 40px;
+    color: var(--yellow-pepe); /* Cambia este color si quieres */
+    transition: color 0.3s ease;
+}
+
+#play-button:hover svg {
+    color: #ff3300;
+}
+
+/*MARQUEE*/
+
+.marquee {
+    width: 100%;
+    background: linear-gradient(135deg, #ff5e00, #ffc700);
+    overflow: hidden; /* Importante para ocultar el contenido fuera del contenedor */
+    position: relative;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    border-bottom: 3px solid #f4b400;
+}
+
+.marquee-content {
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 3px;
+    animation: scroll-left 8s linear infinite;
+    min-width: 200%; /* Doble del ancho del viewport para evitar huecos */
+}
+
+.marquee-content::before,
+.marquee-content::after {
+    content: attr(data-text);
+    white-space: nowrap;
+    margin-left: 0px; /* Espacio entre repeticiones */
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(50%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/*ABOUT US SECTION*/
+
+.about-us {
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 40px 40px;
+    color: white;
+    gap: 20px;
+}
+
+.about-us-image {
+    flex: 1;
+    max-width: 40%;
+    margin: 0;
+}
+
+.about-us-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.about-us-content {
+    flex: 1;
+    max-width: 50%;
+    text-align: center;
+}
+
+.about-us-content h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.about-us-content p {
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.first-cex-section {
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 40px 40px;
+    color: white;
+    gap: 20px;
+}
+
+.first-cex-content {
+    flex: 1;
+    max-width: 50%;
+    text-align: center;
+}
+
+.first-cex-image {
+    flex: 1;
+    max-width: 40%;
+    margin: 0;
+}
+
+.first-cex-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+.first-cex-content h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.first-cex-content p {
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/*AI AGENT SECTION*/
+
+.ai-agent-section {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en varias filas si es necesario */
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px; /* Espacio entre imagen y texto */
+}
+
+.ai-agent-content {
+    flex: 1;
+}
+
+.about-us-image {
+    flex: 1;
+    text-align: center; /* Centra la imagen en el contenedor */
+}
+
+#meet-ronald-btn {
+    margin-top: 20px;
+    align-self: flex-start; /* Solo aplica en pantallas grandes */
+}
+
+/* HOW TO BUY SECTION*/
+
+.how-to-buy {
+    height: 100vh;
+    padding: 40px 0;
+    position: relative; /* Necesario para posicionar el pseudo-elemento */
+    z-index: 1; /* Asegura que el contenido esté por encima */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.how-to-buy::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3; /* Controla la opacidad de la imagen */
+    z-index: -1; /* Coloca la imagen detrás del contenido */
+}
+
+.how-to-buy-content {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.cards {
+    display: flex;
+    gap: 30px;
+    transition: transform var(--transition-speed) ease-in-out;
+    width: 95%;
+}
+
+.card {
+    position: relative; /* Necesario para posicionar el pseudo-elemento */
+    flex: 1 1 calc(50% - 30px); /* Ocupa el 50% menos el gap */
+    min-height: 300px;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    overflow: hidden;
+    z-index: 0; /* Coloca el pseudo-elemento detrás del contenido */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(var(--orange-pepe), var(--purple-pepe));
+    border-radius: inherit; /* Coincide con el borde de la tarjeta */
+    opacity: 0.9; /* Opacidad del fondo */
+    z-index: -1; /* Envía el fondo detrás del contenido */
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    
+}
+
+.card h4 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin: 0;
+    text-align: center;
+}
+
+.card img {
+    width: 80px;
+    height: auto;
+    margin: 10px 0;
+    object-fit: contain;
+}
+
+.card p {
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: center;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+.card .btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#phantom-logo {
+    border-radius: 20px;
+}
+
+/* ONGOING PROJECTS SECTION */
+
+#ongoing-projects {
+    padding: 60px 20px;
+    text-align: center;
+    position: relative;
+    z-index: 1; /* El contenido tiene prioridad */
+    background: linear-gradient(var(--orange-pepe), var(--purple-pepe)), url('https://orangepepe.com/wp-content/uploads/2025/01/orpe-spatial-enhaced-2.jpg') center/cover no-repeat;
+    background-blend-mode:overlay;
+}
+
+#ongoing-projects::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* El pseudo-elemento queda detrás */
+    background: linear-gradient(var(--black-pepe), var(--purple-pepe));
+    opacity: 0.4; /* Controla la opacidad de la imagen */
+}
+
+#projects-intro {
+    margin: 80px auto;
+}
+
+.projects-section h2 {
+    margin-bottom: 20px;
+}
+
+.projects-intro {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.project-item {
+    width: 70%;
+    position: relative;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-size: cover; /* Asegura que la imagen cubra el área del item */
+    background-position: center;
+    background-repeat: no-repeat;
+    background: linear-gradient(var(--orange-pepe), var(--purple-pepe)); /* Gradiente encima de la imagen */
+}
+
+.project-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.project-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.project-item p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* SOCIALS SECTION*/
+
+#social-section {
+    height: 100vh;
+    background: linear-gradient(var(--orange-pepe), var(--yellow-pepe));
+    padding: 50px 20px;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#social-section h2 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+#social-section p {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.socials {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row; /* Valor por defecto */
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilos generales para los enlaces dentro de cualquier `.socials` */
+.socials a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden; /* Asegura que el pseudo-elemento no se salga de los bordes */
+    z-index: 0; /* Coloca el pseudo-elemento detrás del contenido */
+}
+
+
+.social-section > .socials a {
+    font-size: 1.2rem;
+    font-weight: 600;
+    width: 250px;
+    height: 70px;
+    gap: 10px;
+    justify-content: center;
+}
+
+.socials a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--orange-pepe);
+    border-radius: inherit; /* Coincide con el borde de la tarjeta */
+    opacity: 0; /* Opacidad del fondo */
+    z-index: -1; /* Envía el fondo detrás del contenido */
+}
+
+.socials a:hover {
+    transform: scale(1.2);
+}
+
+.socials a img {
+    width: 40px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* ORPENOMICS SECTION */
+
+#orpenomics-section {
+    padding: 50px 20px;
+    text-align: center;
+    background: linear-gradient(var(--yellow-pepe), var(--second-orange-pepe));
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Garantiza que ocupe toda la altura de la pantalla */
+}
+
+#orpenomics-section h2 {
+    font-size: 2.5rem; /* Ajusté el tamaño de la fuente */
+    font-weight: 700;
+    margin-bottom: 20px;
+    max-width: 90%; /* Asegura que el texto no se expanda demasiado */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.orpenomics-content {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: center;
+    align-items: center; /* Centra verticalmente los elementos */
+    width: 100%;
+    margin-top: 30px;
+}
+
+.orpenomics-image img {
+    border-radius: 20px;
+    width: 100%;
+    max-width: 600px; /* Limita el tamaño máximo de la imagen */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin deformarse */
+    height: auto;
+}
+
+.orpenomics-content #buy-btn {
+    margin: auto;
+    font-size: 1.8rem;
+}
+
+.orpenomics-content .orpenomics-image {
+    width: 50%;
+    text-align: center;
+}
+
+.orpenomics-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start; /* Alinea las tarjetas a la izquierda */
+    max-width: 500px; /* Limita el ancho de las tarjetas */
+    width: 100%;
+}
+
+.orpenomics-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    justify-content: flex-start; /* Asegura que las tarjetas se alineen en la parte superior */
+    max-width: 100%;
+}
+
+.orpenomics-cards .card {
+    background: linear-gradient(var(--orange-pepe), var(--purple-pepe));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 15px;
+    gap: 10px;
+    font-size: 1.2rem;
+    color: white;
+    overflow: hidden; /* Asegura que nada se desborde fuera de la tarjeta */
+    text-align: center;
+    min-height: 100px; /* Asegura que las tarjetas tengan una altura mínima */
+    max-width: 100%;
+    transition: transform 0.3s ease-in-out; /* Agrega un efecto de hover */
+}
+
+.orpenomics-cards .card p {
+    overflow-wrap: break-word; /* Hace que el texto largo se ajuste y no se desborde */
+    word-wrap: break-word; /* Alternativa para compatibilidad */
+}
+
+.orpenomics-cards .card:hover {
+    transform: scale(1.05); /* Efecto de ampliación al pasar el cursor */
+}
+
+#orpenomics-section .copy-btn, .how-to-buy .copy-btn {
+    background: var(--black-pepe);
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    padding: 8px 15px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.how-to-buy .copy-btn {
+    padding: 2px 20px;
+    font-size: 1rem;
+}
+
+#orpenomics-section .copy-btn:hover, .how-to-buy .copy-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.copy-btn img {
+    height: auto;
+    width: 20px;
+}
+
+/*Chart Token Container*/
+
+.token-container {
+    width: 90%;
+    height: 100vh; /* Esto asegura que ocupe toda la altura de la ventana */
+    box-sizing: border-box; /* Incluye el padding en el cálculo del tamaño */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.token-container h2 {
+    margin: 100px 0;
+}
+
+#geckoterminal-embed {
+    width: 100%;
+    height: 100%;
+    border: none; /* Eliminar bordes */
+    border-radius: 25px;
+    display: block; /* Asegura que no haya espacio extra debajo */
+    max-width: 100%; /* Asegura que no se desborde en pantallas pequeñas */
+}
+
+
+/* Gallery section */
+
+#gallery-section {
+    padding: 50px 20px;
+    background: linear-gradient(var(--second-orange-pepe), var(--yellow-pepe));
+    color: white;
+    text-align: center;
+}
+
+#gallery-section h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    width: 100%;
+}
+
+.gallery-row {
+    display: contents; /* Hacemos que .gallery-row no se comporte como un contenedor, sino que las imágenes se ubiquen directamente en el grid */
+}
+
+.gallery-row img {
+    width: 100%; /* Asegura que las imágenes llenen su celda en el grid */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-row img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.footer-section {
+    color: #fff;
+    background: var(--primary-color);
+    text-align: center;
+    padding: 20px;
+}
+
+.footer-content {
+    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section p {
+    font-size: 1rem;
+    margin: 20px auto;
+    text-align: center;
+    max-width: 80%; /* Limita el ancho del texto */
+}
+
+.disclaimer {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0 auto 20px;
+}
+
+.copyright {
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+
+/* Media Query para pantallas pequeñas */
+
+@media (max-width: 480px) {
+    body {
+        font-size: 1.2rem;
+    }
+
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        display: none;
+    }
+
+    .nav-links {
+        flex-direction: column; /* Enlaces en columna */
+        gap: 15px; /* Menos separación entre enlaces */
+        align-items: center; /* Centra los enlaces */
+    }
+
+    .main-content {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        min-height: 80vh;
+        margin-top: 60px;
+    }
+
+    img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    #orpe-text {
+        align-items: center;
+    }
+
+    .main-content > #orpe-text > .socials {
+        flex-direction: column;
+        gap: 0;
+        margin: 20px 0;
+    }
+
+    .marquee {
+		margin-top:30px;
+    }
+
+    .marquee-content {
+        animation: scroll-left 20s linear infinite;
+    }
+
+    @keyframes scroll-left {
+        0% {
+            transform: translateX(0%); /* Comienza con texto visible */
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+
+    .about-us:not(.ai-agent-section), .first-cex-section {
+        height: auto;
+        display: block;
+        text-align: center !important;
+    }
+
+    .about-us-image, .about-us-content, .first-cex-content{
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    .about-us-image, .first-cex-image {
+        flex: 1;
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .about-us-content p , .first-cex-content p{
+        font-size: 1.2rem;
+    }
+
+    .ai-agent-content p:nth-last-of-type(1) {
+        display: none; /* Oculta el último párrafo */
+    }
+
+    .how-to-buy::before {
+        background: none;
+    }
+
+    #social-section {
+        height: auto;
+    }
+
+    #social-section h2 {
+        font-size: 1.8rem; /* Ajuste de título para dispositivos móviles */
+    }
+
+    #social-section p {
+        font-size: 0.9rem; /* Ajuste de tamaño de texto para móviles */
+    }
+
+    .socials {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 15px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .socials a {
+        height: 60px; /* Ajustar altura en móviles */
+        font-size: 1.2rem; /* Ajustar tamaño de fuente en móviles */
+        padding: 8px 15px; /* Ajustar el padding */
+    }
+
+    .socials a img {
+        width: 30px; /* Reducir el tamaño de los iconos */
+    }
+
+    .cards p{
+        text-wrap: wrap;
+    }
+
+    .card #ca {
+        word-wrap: break-word;
+        text-overflow: ellipsis;
+        max-width: 90%;
+    }
+
+    .orpenomics-content {
+        gap: 10px;
+    }
+
+    .orpenomics-image img {
+        width: 100%;
+        height: 350px;
+    }
+
+    .orpeconomics-cards {
+        gap: 10px;
+    }
+
+    .orpenomics-cards .card {
+        font-size: 0.9rem;
+    }
+
+    .orpenomics-cards .card p {
+        font-size: 0.8rem;
+    }
+
+    .copy-btn {
+        width: auto;
+        gap: 5px;
+    }
+
+    .copy-btn img {
+        width: 18px;
+    }
+
+    .projects-section h2 {
+        font-size: 2rem;
+    }
+    .projects-intro {
+        font-size: 1.2rem;
+    }
+    .project-item {
+        width: 95%; /* Ocupa casi todo el ancho */
+        padding: 10px;
+    }
+    .project-item h3 {
+        font-size: 1.4rem;
+    }
+    .project-item p {
+        font-size: 1rem !important;
+        line-height: 1.4;
+    }
+
+    #gallery-section h2 {
+        font-size: 1.7rem;
+    }
+
+    .gallery-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-section p {
+        font-size: 0.7rem;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    body {
+        font-size: 1.2rem;
+    }
+
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        display: none;
+    }
+
+    .nav-links {
+        flex-direction: column; /* Enlaces en columna */
+        gap: 15px; /* Menos separación entre enlaces */
+        align-items: center; /* Centra los enlaces */
+    }
+
+    .main-content {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        min-height: 80vh;
+    }
+
+    .main-content #orpe-main-logo {
+        margin-top: 10vh;
+    }
+
+    .main-content > #orpe-text > .socials {
+        flex-direction: column;
+        margin: 0;
+        gap: 0;
+        margin: 50px 0 20px;
+    }
+
+    img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    #orpe-text {
+        align-items: center;
+    }
+
+    .orpe-anthem-audio {
+        margin-top: 40px;
+    }
+
+    .marquee {
+		margin-top:40px;
+    }
+
+    .marquee-content {
+        animation: scroll-left 20s linear infinite;
+    }
+
+    @keyframes scroll-left {
+        0% {
+            transform: translateX(0%); /* Comienza con texto visible */
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+
+    .about-us:not(.ai-agent-section) {
+        height: auto;
+        display: block;
+        text-align: center !important;
+    }
+
+    .about-us-image, .about-us-content, .first-cex-content {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    .about-us-image {
+        flex: 1;
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .about-us-image img{
+        min-width: 60% !important;
+    }
+
+    .about-us-content p , .first-cex-content p{
+        font-size: 1.2rem;
+    }
+
+    .first-cex-image {
+        flex: 1;
+        min-width: 100% !important;
+        margin: 0;
+    }
+    
+    .first-cex-image img {
+        min-width: 80% !important;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+
+
+    .how-to-buy h2 {
+        margin: 0 auto;
+        max-width: calc(100% - 20px); /* Asegura un margen de 10px a cada lado */
+    }
+
+    .how-to-buy .content {
+        padding: 15px;
+    }
+
+    .cards {
+    flex-direction: column; /* Distribuye las tarjetas en una sola columna */
+    gap: 15px;
+    }
+
+    .card {
+        flex: 1 1 100%; /* Cada tarjeta ocupa el 100% del ancho en dispositivos móviles */
+        max-width: none; /* Sin límite de ancho en móviles */
+        padding: 15px;
+    }
+
+    .card h4 {
+        font-size: 1.3rem; /* Ajustar el tamaño del título en móviles */
+    }
+
+    .card p {
+        font-size: 1rem; /* Texto más compacto */
+    }
+
+    .card img {
+        max-width: 60px; /* Tamaño más pequeño de imagen en móviles */
+    }
+
+    .card #ca {
+        word-wrap: break-word;
+        text-overflow: ellipsis;
+        max-width: 90%;
+    }
+
+    .btn {
+        font-size: 1.8rem;
+        padding: 10px 15px;
+    }
+
+    .how-to-buy {
+        height: auto;
+    }
+
+    .how-to-buy::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.3; /* Controla la opacidad de la imagen */
+        z-index: -1; /* Coloca la imagen detrás del contenido */
+    }
+
+    .how-to-buy-content {
+        height: auto; /* Ajusta la altura automáticamente en móviles */
+        padding: 10px;
+        margin-top: 20px;
+    }
+
+    .cards {
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 20px; /* Reduce el espacio entre tarjetas */
+        width: 70%; /* Ocupa todo el ancho disponible */
+    }
+
+    .card {
+        min-height: 250px; /* Reduce la altura mínima */
+        padding: 20px; /* Ajusta el padding para móviles */
+    }
+
+    .card h4 {
+        font-size: 1.3rem; /* Reduce ligeramente el tamaño del título */
+    }
+
+    .card img {
+        width: 60px; /* Ajusta el tamaño de las imágenes */
+        margin: 5px 0;
+    }
+
+    .card p {
+        font-size: 1.1rem; /* Texto más compacto */
+        line-height: 1.4;
+    }
+
+    .card .btn {
+        font-size: 1.3rem; /* Botones más pequeños */
+        padding: 8px 15px;
+    }
+
+    .how-to-buy .copy-btn {
+        padding: 10px 20px;
+        font-size: 1.4rem;
+    }
+
+    h2:not(.orpe-text h2) {
+        font-size: 2rem !important;
+    }
+    .projects-intro {
+        font-size: 1rem;
+    }
+    .project-item {
+        width: 90%; /* Ocupa casi todo el ancho disponible */
+        padding: 15px;
+    }
+    .project-item h3 {
+        font-size: 1.5rem;
+    }
+    .project-item p {
+        font-size: 0.9rem;
+    }
+
+    #social-section {
+        height: 80vh !important; /* Ajuste de altura para dispositivos pequeños */
+        padding: 30px 20px;
+    }
+
+    #social-section h2 {
+        font-size: 2.5rem; /* Ajustar tamaño del título en móviles */
+        margin: 0;
+    }
+
+    #social-section p {
+        font-size: 1.2rem; /* Ajustar tamaño del párrafo */
+        line-height: 1.5;
+        max-width: 90%; /* Limitar el ancho del párrafo en móviles */
+        margin: 40px auto;
+    }
+
+    .socials {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 15px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .socials a {
+        height: 60px; 
+        font-size: 1.2rem;
+        padding: 8px 15px;
+    }
+
+    .socials a img {
+        width: 30px; /* Reducir el tamaño de los iconos */
+    }
+
+    #orpenomics-section h2 {
+        font-size: 2rem;
+    }
+
+    .orpenomics-image {
+        width: 100%;
+        display: flex;
+        justify-content: center; /* Centra la imagen en el eje horizontal */
+        align-items: center; /* Asegura que esté centrada verticalmente si es necesario */
+    }
+
+    .orpenomics-image img {
+        width: 80vw;
+        max-width: none;
+        margin: 0; /* Elimina cualquier margen */
+    }
+
+    .orpenomics-cards .card {
+        font-size: 1rem;
+        padding: 8px;
+    }
+
+    .orpenomics-cards .card p {
+        text-wrap: wrap;
+    }
+
+    .copy-btn {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+
+    .copy-btn img {
+        width: 18px;
+    }
+
+    #gallery-section h2 {
+        font-size: clamp(1.5rem, 5vw, 3rem) !important; /* Ajusta el tamaño entre 1.5rem y 3rem basado en el ancho de la pantalla */
+        text-align: center; /* Centra el texto */
+    }
+
+    .gallery-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-section p {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .nav-links a {
+        font-size: 0.9rem;
+    }
+
+    #orpe-main-logo {
+        width: 300px;
+    }
+
+    .main-content h1 {
+        font-size: 4rem;
+    }
+
+    .main-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .main-content > #orpe-text > .socials > a img {
+        width: 20px;
+    }
+
+    .main-content .socials a {
+        font-size: 0.85rem;
+    }
+
+    .how-to-buy {
+        height: auto;
+    }
+
+    .how-to-buy h2 {
+        font-size: 2.2rem; /* Ajuste de tamaño del título */
+    }
+
+    .how-to-buy-content{
+        padding: 20px;
+        height: auto;
+    }
+
+    .btn {
+        font-size: 1.5rem; /* Ajuste de tamaño de botón */
+        padding: 10px 20px;
+    }
+
+    .cards {
+        min-height: auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .card {
+        flex: 1 1 48%; /* Ajuste para que las tarjetas ocupen 48% de la fila */
+        padding: 20px;
+    }
+
+    .card h4 {
+        font-size: 1.4rem; /* Ajuste del tamaño del título */
+    }
+
+    .card img {
+        width: 70px; /* Ajuste del tamaño de las imágenes */
+    }
+
+    .card p {
+        font-size: 1.1rem; /* Ajuste de tamaño de texto */
+    }
+
+    .card .btn {
+        font-size: 1.4rem;
+        padding: 12px 20px;
+    }
+
+    #social-section h2 {
+        font-size: 2.2rem; /* Ajuste de tamaño del título para tablet grande */
+    }
+
+    #social-section p {
+        font-size: 1.1rem; /* Ajuste de tamaño de texto para tablet grande */
+        margin: 30px auto;
+    }
+
+    .socials {
+        gap: 20px; /* Espaciado entre los iconos */
+    }
+
+    .socials a img {
+        width: 32px;
+    }
+
+    .orpenomics-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .orpenomics-image,
+    .orpenomics-details {
+        width: 100%;
+    }
+
+    .orpeconomics-image img {
+        max-width: 300px;
+    }
+
+    .copy-btn img {
+        width: 18px;
+    }
+
+    .project-item {
+        width: 85%; /* Reduce el ancho en pantallas medianas */
+        padding: 15px;
+    }
+    .project-item h3 {
+        font-size: 1.6rem;
+    }
+    .project-item p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .ai-agent-section {
+        flex-direction: column; /* Cambia a columna en móvil */
+        text-align: center;
+        align-items: center;
+    }
+
+    .about-us-image {
+        order: 1 !important; /* Mueve la imagen al inicio */
+    }
+
+    .ai-agent-content {
+        order: 2; /* Coloca el contenido debajo de la imagen */
+    }
+
+    #meet-ronald-btn {
+        order: 3; /* Asegura que el botón esté debajo del contenido */
+        margin-top: 10px;
+        align-self: center;
+    }
+}
